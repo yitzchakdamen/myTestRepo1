@@ -1,0 +1,53 @@
+git init                     # יוצר מאגר Git חדש במחשב המקומי.
+git clone <repository_url>    # משכפל מאגר Git מ-URL (כגון GitHub) למחשב שלך.
+git add <file_name>           # מוסיף קובץ ספציפי לשלב (staging area) לפני ביצוע commit.
+git add .                     # מוסיף את כל הקבצים שהשתנו לשלב (staging area).
+git commit -m "<message>"     # מבצע commit עם הודעה שמסבירה את השינויים שבוצעו.
+git status                    # מציג את מצב המאגר: קבצים שונו, נמצאים בשלב או לא.
+git log                       # מציג את היסטוריית ה-commits במאגר.
+git diff                      # מציג את ההבדלים בין הקבצים הנוכחיים לבין ה-commit הקודם.
+git reset <commit_id>         # מחזיר את המאגר למצב של commit מסוים (יכול לבטל שינויים).
+git reset --hard <commit_id>  # מוחק את כל השינויים שבוצעו אחרי ה-commit הספציפי (כולל שינויים בקבצים).
+git remote add origin <repository_url>  # מחבר את המאגר המקומי ל-remote repository (כגון GitHub).
+git remote -v                 # מציג את ה-remote repositories המוגדרים במאגר.
+git fetch                     # מושך מידע מהמאגר הרחוק, כולל עדכונים על סניפים חדשים.
+git pull                      # מושך וממזג (merge) שינויים מהמאגר הרחוק לסניף המקומי.
+git push                      # שולח את השינויים המקומיים ל-remote repository (כגון GitHub).
+git push origin <branch_name> # שולח את השינויים בסניף המקומי אל ה-remote repository.
+git branch                    # מציג את כל הסניפים במאגר המקומי.
+git branch <branch_name>      # יוצר סניף חדש.
+git checkout <branch_name>    # עובר לסניף אחר במאגר.
+git checkout -b <branch_name> # יוצר סניף חדש ומעביר אליו באופן אוטומטי.
+git merge <branch_name>       # ממזג את השינויים מסניף אחד לסניף הנוכחי.
+git rebase <branch_name>      # משלב שינויים מסניף אחר על סניף הנוכחי.
+git stash                     # שומר שינויים לא גמורים במאגר נפרד ומנקה את העבודה הנוכחית.
+git stash pop                 # מחזיר את השינויים ששמרת בעזרת git stash.
+git tag <tag_name>            # יוצר תג (tag) ב-commit הנוכחי.
+git tag -d <tag_name>         # מוחק תג שנוצר.
+git show <commit_id>          # מציג פרטים על commit מסוים.
+git diff --staged             # מציג את השינויים שבוצעו בקבצים הנמצאים בשלב ה-staging.
+git commit --amend            # מאפשר לתקן את ה-commit האחרון (לשנות את ההודעה או להוסיף קבצים).
+git log --oneline             # מציג את היסטוריית ה-commits בצורה מקוצרת (בשורה אחת).
+git log --graph               # מציג את היסטוריית ה-commits בצורה גרפית.
+git clean -fd                 # מנקה קבצים לא גרועים (לא בגרסה).
+git diff <commit_id_1> <commit_id_2> # מציג את ההבדלים בין שני commits ספציפיים.
+
+פקודות שקשורות ל-GitHub:
+
+git fork                      # עליך לבצע פעולה זו ב-GitHub, משכפל מאגר כדי לעבוד עליו בנפרד.
+git pull-request (PR)         # שיטה ב-GitHub (לא בפקודות Git) ליצירת Pull Request אחרי commit.
+git remote add origin <repository_url>  # מחבר את המאגר המקומי ל-repository ב-GitHub.
+git push --force              # שולח שינויים תוך התעלמות מקונפליקטים (לא מומלץ לעיתים קרובות).
+git push origin <branch_name> # שולח את השינויים לסניף ספציפי ב-GitHub.
+git pull origin <branch_name> # מושך שינויים מסניף ב-GitHub.
+
+פקודות נוספות מתקדמות ב-Git:
+
+git log --graph --all --decorate --oneline  # מציג את כל ההיסטוריה של המאגר בצורה גרפית וממוקדת.
+git config --global user.name "Your Name"   # מגדיר את שם המשתמש שלך ב-Git.
+git config --global user.email "youremail@example.com"  # מגדיר את כתובת המייל שלך ב-Git.
+git config --global core.editor "code"     # מגדיר את עורך הקוד שלך (למשל, Visual Studio Code).
+git config --list                  # מציג את כל ההגדרות של Git (כמו שם, מייל, עורך וכו').
+git merge --abort                  # מבטל מיזוג (merge) אם יש קונפליקטים.
+git cherry-pick <commit_id>        # בוחר commit מסניף אחר ומעתיק אותו לסניף הנוכחי.
+
